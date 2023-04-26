@@ -1,4 +1,4 @@
-﻿namespace GearVeloAPI.Admin.Dtos.Navabr;
+﻿namespace GearVeloAPI.Admin.Dtos.Navbar;
 
 public class NavbarListItemDto
 {

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using GearVeloAPI.Admin.Dtos.Navabr;
+using GearVeloAPI.Admin.Dtos.Navbar;
 using GearVeloAPI.Admin.Services.Concretes;
 using GearVeloAPI.Contracts.ModelName;
 using GearVeloAPI.Database;

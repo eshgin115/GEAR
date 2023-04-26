@@ -1,4 +1,4 @@
-﻿using GearVeloAPI.Admin.Dtos.Navabr;
+﻿using GearVeloAPI.Admin.Dtos.Navbar;
 
 namespace GearVeloAPI.Admin.Services.Concretes;
 

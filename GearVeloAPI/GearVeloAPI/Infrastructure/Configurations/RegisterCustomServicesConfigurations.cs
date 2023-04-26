@@ -1,15 +1,21 @@
-﻿namespace GearVeloAPI.Infrastructure.Configurations;
+﻿using GearVeloAPI.Admin.Services.Concretes;
+using GearVeloAPI.Admin.Services.Services;
+using GearVeloAPI.Helper.Services.Concretes;
+using GearVeloAPI.Helper.Services.Services;
+
+namespace GearVeloAPI.Infrastructure.Configurations;
 
 public static class RegisterCustomServicesConfigurations
 {
     public static void RegisterCustomServices(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddTransient<IEndpointService, EndpointService>();
+        services.AddScoped<INavbarService, NavbarService>();
+        services.AddScoped<ISubnavbarService, SubnavbarService>();
 
         //services.AddSingleton<IFileService, FileService>();
         //services.AddScoped<IFeedbackSevice, FeedbackService>();
         //services.AddScoped<IDiscoverMenuService, DiscoverMenuService>();
-        //services.AddScoped<INavbarService, NavbarService>();
-        //services.AddScoped<ISubnavbarService, SubnavbarService>();
         //services.AddScoped<IShortInfoService, ShortInfoService>();
         //services.AddScoped<IWelcomeSliderService, WelcomeSliderService>();
         //services.AddScoped<IPaymentBenefitsService, PaymentBenefitsService>();

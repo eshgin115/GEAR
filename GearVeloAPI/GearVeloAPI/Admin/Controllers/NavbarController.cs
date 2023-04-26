@@ -1,4 +1,4 @@
-﻿using GearVeloAPI.Admin.Dtos.Navabr;
+﻿using GearVeloAPI.Admin.Dtos.Navbar;
 using GearVeloAPI.Admin.Services.Concretes;
 using GearVeloAPI.Contracts.Identity;
 using Microsoft.AspNetCore.Authorization;
@@ -30,7 +30,7 @@ public class NavbarController : ControllerBase
     #region add
 
     [HttpPost("navbar")]
-    public async Task<IActionResult> AddAsync(NavbarCreateDto dto)
+    public async Task<IActionResult> AddAsync([FromBody]NavbarCreateDto dto)
     {
         return Created(string.Empty, await _navbarService.AddAsync(dto));
 
@@ -40,7 +40,7 @@ public class NavbarController : ControllerBase
     #region Update
 
     [HttpPut("navbar/{id}")]
-    public async Task<IActionResult> UpdateAsync(int id, NavbarUpdateDto dto)
+    public async Task<IActionResult> UpdateAsync(int id,[FromBody] NavbarUpdateDto dto)
     {
         return Ok(await _navbarService.UpdateAsync(id, dto));
     }

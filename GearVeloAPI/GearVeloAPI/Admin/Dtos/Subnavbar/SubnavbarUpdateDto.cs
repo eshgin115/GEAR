@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GearVeloAPI.Admin.Dtos.Navabr;
+namespace GearVeloAPI.Admin.Dtos.Subnavbar;
 
-public class NavbarUpdateDto
+public class SubnavbarUpdateDto
 {
     [Required]
     public string Name { get; set; } = default!;
@@ -11,8 +11,5 @@ public class NavbarUpdateDto
     [Required]
     public int Order { get; set; }
     [Required]
-    public bool IsViewOnHeader { get; set; }
-    [Required]
-    public bool IsViewOnFooter { get; set; }
-    public DateTime UpdateAt { get; set; }
+    public int NavbarId { get; set; }
 }

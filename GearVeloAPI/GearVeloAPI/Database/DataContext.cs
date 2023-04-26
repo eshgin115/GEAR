@@ -14,6 +14,7 @@ public partial class DataContext : DbContext
     }
 
     public DbSet<Navbar> Navbars { get; set; }
+    public DbSet<Subnavbar> Subnavbars { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly<Program>();
