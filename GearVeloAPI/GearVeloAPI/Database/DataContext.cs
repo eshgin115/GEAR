@@ -1,4 +1,5 @@
-﻿using GearVeloAPI.Database.Models.Common;
+﻿using GearVeloAPI.Database.Models;
+using GearVeloAPI.Database.Models.Common;
 using GearVeloAPI.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,8 +12,8 @@ public partial class DataContext : DbContext
     {
 
     }
-   
-    //public DbSet<DiscoverMenuImage> DiscoverMenuImages { get; set; }
+
+    public DbSet<Navbar> Navbars { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly<Program>();
